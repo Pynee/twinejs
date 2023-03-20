@@ -7,9 +7,8 @@
 	pointer-events: none;
 	position: fixed;
 	right: var(--grid-size);
-	top: calc(
-		2 * var(--control-height) + var(--grid-size)
-	); /* below <top-bar> height */
+	top: calc(2 * var(--control-height) + var(--grid-size));
+	/* below <top-bar> height */
 }
 
 .dialogs {
@@ -22,14 +21,14 @@
 	pointer-events: none;
 	position: fixed;
 	right: var(--grid-size);
-	top: calc(
-		2 * var(--control-height) + var(--grid-size)
-	); /* below <top-bar> height */
+	top: calc(2 * var(--control-height) + var(--grid-size));
+	/* below <top-bar> height */
 	left: var(--grid-size);
 	bottom: var(--grid-size);
 }
 
-.dialogs .dialog-card, .dialogs .background-dialog-card {
+.dialogs .dialog-card,
+.dialogs .background-dialog-card {
 	flex: 1;
 	pointer-events: auto;
 }
@@ -45,4 +44,18 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+
+@media screen and (max-width: 760px) {
+	.dialogs {
+		top: calc(3 * var(--control-height) + var(--grid-size));
+	}
+
+	.harlowe-3-toolbarPanel.card {
+		width: auto !important;
+	}
+
+	.harlowe-3-scrollWrapper {
+		max-height: calc(100vh - (5 * var(--control-height) + var(--grid-size))) !important;
+	}
 }

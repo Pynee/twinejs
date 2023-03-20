@@ -52,3 +52,13 @@
 	font-weight: bold;
 	background: linear-gradient(to top, var(--blue) 0, var(--blue) 2px, transparent 2px)
 }
+
+@media screen and (max-width: 760px) {
+	.route-toolbar {
+		height: calc(3 * var(--control-height) + var(--grid-size));
+	}
+
+	.route-toolbar .route-toolbar-pinned-controls {
+		font-size: 0;
+	}
+}
